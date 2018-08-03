@@ -1,0 +1,122 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" id="viewport" name="viewport">
+	<title>提交订单</title>
+	<script src="../js/flexible.debug.js"></script>
+	<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+	<header>
+		<a class="act-style" href="javascript:history.go(-1)"><i class="back layui-icon">&#xe603;</i></a>
+        <span class="titletip">提交订单</span>
+	</header>
+	<div class="pageContent">
+		<div class="config-order">
+			<div class="shop-name">
+				<h3>众联商店</h3>
+			</div>
+			<div class="order-li">
+				<a class="active" href="order-details.html">
+					<img src="../images/Frame_mht.png" alt="">
+					<div class="detail-cont">
+						<h3>标题积分兑换</h3>
+						<p class="detail">这是详情，购买这个商品需要1000积分，同时购买商品后会得到相应的金蛋金额。金蛋可用于交易，在线转账，及提现。您可以让你的商品升值</p>
+					</div>
+				</a>
+			</div>
+			<div class="order-li order-list">
+				<span>购买数量：</span>
+				<div class="order-li-fun hand">
+					<input class="minus" type="button" value="-">
+					<input class="hand-num" type="text" value="1">
+					<input class="plus" type="button" value="+">
+				</div>
+			</div>
+			<div class="order-li order-list">
+				<span>配送方式：</span>
+				<div class="order-li-fun">
+					快递
+				</div>
+			</div>
+			<div class="order-li order-list">
+				<span>配送时间：</span>
+				<div class="order-li-fun">
+					当天发货，预计3天内到货
+				</div>
+			</div>
+			<div class="order-li order-list">
+				<span>运费：</span>
+				<div class="order-li-fun">
+					无
+				</div>
+			</div>
+			<div class="order-li order-list">
+				<!-- <span>金额：</span> -->
+				<div class="order-li-fun">
+					<span>共<i class="p1 _handle_num">1</i>件</span>
+					<span>合计：<i class="p1 red fontWeight _handle_sum">2000</i>金蛋</span>
+				</div>
+			</div>
+		</div>
+		<div class="rece-address">
+			<i class="layui-icon adress-icon-pic">&#xe715;</i>
+			<a href="address-change.html" class="rece-address-mesg">
+				<p>收货人：王五</p>
+				<p>电话：13888888888</p>
+				<p class="pflex">
+					<span>收货地址：</span>
+					<span class="address-span">广东省深圳市宝安区前海特区兴业路2005号互联网创意园A栋6楼</span>
+				</p>
+			</a>
+			<i class="layui-icon adress-icon-link">&#xe602;</i>
+		</div>
+	</div>
+	<div class="shop-bar">
+		<ul>
+			<li class="order-sec">
+				<span>共<i class="p1 _handle_num">1</i>件</span>
+				<span>合计：<i class="p1 red fontWeight _handle_sum">2000</i>金蛋</span>
+			</li>
+			<li class="bar-buy">
+				<a href="javascript:;">付款</a>
+			</li>
+		</ul>
+	</div>
+<script src="../js/jquery-1.7.2.min.js"></script>
+<script src="../js/layer.js"></script>
+<script>
+$(function(){
+	var _handle_num = $("._handle_num");
+	var _handle_sum = $("._handle_sum").html();
+	$(".bar-buy a").click(function(event) {
+		layer.open({
+		    content: '转到支付界面去',
+		    skin: 'msg',
+		    time: 2
+		});
+	});
+
+	$(".plus").click(function(){
+        var n=$(this).siblings('.hand-num').val();
+        var num=parseInt(n)+1;
+        $(this).siblings('.hand-num').val(num);
+        _handle_num.text(num);
+        $("._handle_sum").text(num*_handle_sum);
+    });
+
+    $(".minus").click(function(){
+        var n=$(this).siblings('.hand-num').val();
+        var num=parseInt(n)-1;
+        if(num==0){
+            return;
+        }
+        $(this).siblings('.hand-num').val(num);
+        _handle_num.text(num);
+        $("._handle_sum").html(num*_handle_sum);
+    });
+})
+</script>
+</body>
+</html>

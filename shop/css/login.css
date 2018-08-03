@@ -1,0 +1,24 @@
+.change-form{background-color: #fff;margin-top: 0.2rem;padding:0 0.5rem;}
+.change-form .change-password{text-align: center;padding: 0.2rem 0;color:#333;}
+.change-form .change-password input{line-height: 1rem;border-bottom: 1px solid #dedede;color:#666;padding: 0 0.2rem;}
+.change-sure{text-align: center;padding: 1rem 0;}
+input.surebtn{background-color: #1caceb;width: 100%; color:#fff;font-size: 18px;line-height: 1.2rem;border-radius: 0.1rem;}
+input.surebtn:active{background-color: #0e8cc3;}
+/*login*/
+.formstyle{text-align: center;padding:0 0.5rem; margin-top: 2rem;}
+.formstyle .contMain{border-bottom: 1px solid #dedede;display: flex;padding-top: 0.2rem;padding-bottom: 0.1rem; color:#333;}
+.formstyle .formTac{padding: 1rem 0;}
+.contMain label{flex: 3; line-height: 1rem;}
+.contMain input{flex:7;height: 1rem;line-height: 1rem;color:#333;}
+.reg-forget-link{width: 100%; text-align: right;padding:0.1rem 0.5rem;}
+.reg-forget-link a{text-decoration: underline; }
+/* forgrtPassword */
+.forget-form,.register-form{padding: 0; margin: 0;background-color: #fff;}
+.forget-form label，.register-form label{text-align: left;padding-left: 0.3rem;}
+.outFormTac{padding: 2rem 0 1rem 0;width: 90%;margin-left: 5%;}
+.service-link{width: 100%; text-align: left;padding:0.1rem 0.5rem;}
+.service-link a{text-decoration: underline; color:#1caceb;}
+/* register */
+
+
+

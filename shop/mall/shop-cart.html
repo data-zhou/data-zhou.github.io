@@ -1,0 +1,266 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" id="viewport" name="viewport">
+    <title>购物车</title>
+    <script src="../js/flexible.debug.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <a class="act-style" href="javascript:history.go(-1)"><i class="back layui-icon">&#xe603;</i></a>
+        <span class="titletip">购物车</span>
+    </header>
+    <div class="pageContent order-ment-content">
+    	<div class="order-ment-list order-cart-list">
+    		<ul>
+    			<li>
+					<div class="title-name shop-cart-edit">
+						<h3>众联商店</h3>
+						<a href="javascript:;">编辑</a>
+					</div>
+					<div class="order-li shop-cart-li shop-cart-checked">
+						<!-- <i class="cart-i-check layui-icon">&#xe63f;</i> -->
+		                <a class="active" href="javascript:;">
+		                    <img src="../images/Frame_mht.png" alt="">
+		                    <div class="detail-cont">
+		                        <h3>标题积分兑换</h3>
+		                        <p class="detail">这是详情，购买这个商品需要1000积分，同时购买商品后会得到相应的金蛋金额。金蛋可用于交易，在线转账，及提现。您可以让你的商品升值</p>
+		                    </div>
+		                </a>
+	                    <div class="delete-button">
+							<button>删除</button>
+	                    </div>
+		            </div>
+		            <div class="order-ment-mess">
+	                    <span>共<i class="p1">1</i>件</span>
+	                    <span>合计：<i class="p1 red fontWeight">1888</i>金蛋</span>
+	                </div>
+    			</li>
+    			<li>
+					<div class="title-name shop-cart-edit">
+						<h3>众联商店</h3>
+						<a href="javascript:;">编辑</a>
+					</div>
+					<div class="order-li shop-cart-li shop-cart-check">
+						<i class="cart-i-check layui-icon"></i>
+		                <a class="active" href="javascript:;">
+		                    <img src="../images/Frame_mht.png" alt="">
+		                    <div class="detail-cont">
+		                        <h3>标题积分兑换</h3>
+		                        <p class="detail">这是详情，购买这个商品需要1000积分，同时购买商品后会得到相应的金蛋金额。金蛋可用于交易，在线转账，及提现。您可以让你的商品升值</p>
+		                    </div>
+		                </a>
+	                    <div class="delete-button">
+							<button>删除</button>
+	                    </div>
+		            </div>
+		            <div class="order-ment-mess">
+	                    <span>共<i class="p1">1</i>件</span>
+	                    <span>合计：<i class="p1 red fontWeight">2000</i>金蛋</span>
+	                </div>
+    			</li>
+    			<li>
+					<div class="title-name shop-cart-edit">
+						<h3>众联商店</h3>
+						<a href="javascript:;">编辑</a>
+					</div>
+					<div class="order-li shop-cart-li shop-cart-check">
+						<i class="cart-i-check layui-icon"></i>
+		                <a class="active" href="javascript:;">
+		                    <img src="../images/Frame_mht.png" alt="">
+		                    <div class="detail-cont">
+		                        <h3>标题积分兑换</h3>
+		                        <p class="detail">这是详情，购买这个商品需要1000积分，同时购买商品后会得到相应的金蛋金额。金蛋可用于交易，在线转账，及提现。您可以让你的商品升值</p>
+		                    </div>
+		                </a>
+	                    <div class="delete-button">
+							<button>删除</button>
+	                    </div>
+		            </div>
+		            <div class="order-ment-mess">
+	                    <span>共<i class="p1">1</i>件</span>
+	                    <span>合计：<i class="p1 red fontWeight">2000</i>金蛋</span>
+	                </div>
+    			</li>
+    			<li>
+					<div class="title-name shop-cart-edit">
+						<h3>众联商店</h3>
+						<a href="javascript:;">编辑</a>
+					</div>
+					<div class="order-li shop-cart-li shop-cart-check">
+						<i class="cart-i-check layui-icon"></i>
+		                <a class="active" href="javascript:;">
+		                    <img src="../images/Frame_mht.png" alt="">
+		                    <div class="detail-cont">
+		                        <h3>标题积分兑换</h3>
+		                        <p class="detail">这是详情，购买这个商品需要1000积分，同时购买商品后会得到相应的金蛋金额。金蛋可用于交易，在线转账，及提现。您可以让你的商品升值</p>
+		                    </div>
+		                </a>
+	                    <div class="delete-button">
+							<button>删除</button>
+	                    </div>
+		            </div>
+		            <div class="order-ment-mess">
+	                    <span>共<i class="p1">1</i>件</span>
+	                    <span>合计：<i class="p1 red fontWeight">2000</i>金蛋</span>
+	                </div>
+    			</li>
+    		</ul>
+    	</div>
+    </div>
+	<div class="shop-bar">
+		<ul>
+			<li class="order-sec">
+				<span>合计：<i id="total" class="p1 red fontWeight">2000</i>金蛋</span>
+			</li>
+			<li class="bar-buy">
+				<a href="javascript:;">结算</a>
+			</li>
+		</ul>
+	</div>
+<script src="../js/jquery-1.7.2.min.js"></script>
+<script>
+$(function(){
+	// 设定每一行的宽度=屏幕宽度+按钮宽度
+    $(".shop-cart-li").width($(".order-ment-list ul li").width() + $(".more").width());
+    // 设定常规信息区域宽度=屏幕宽度
+    $(".shop-cart-li").width($(".order-ment-list ul li").width());
+    // 设定文字部分宽度（为了实现文字过长时在末尾显示...）
+    $(".shop-cart-li p").width($(".shop-cart-li").width());
+	
+	// 获取所有行，对每一行设置监听
+    var lines = $(".shop-cart-li");
+    var len = lines.length; 
+    var lastX, lastXForMobile;
+	// 用于记录被按下的对象
+    var pressedObj;  // 当前左滑的对象
+    var lastLeftObj; // 上一个左滑的对象
+
+    // 用于记录按下的点
+    var start;
+    // 网页在移动端运行时的监听
+    for (var i = 0; i < len; ++i) {
+        lines[i].addEventListener('touchstart', function(e){
+            lastXForMobile = e.changedTouches[0].pageX;
+            pressedObj = this; // 记录被按下的对象 
+
+            // 记录开始按下时的点
+            var touches = event.touches[0];
+            start = { 
+                x: touches.pageX, // 横坐标
+                y: touches.pageY  // 纵坐标
+            };
+        });
+
+        lines[i].addEventListener('touchmove',function(e){
+            // 计算划动过程中x和y的变化量
+            var touches = event.touches[0];
+            delta = {
+                x: touches.pageX - start.x,
+                y: touches.pageY - start.y
+            };
+
+            // 横向位移大于纵向位移，阻止纵向滚动
+            if (Math.abs(delta.x) > Math.abs(delta.y)) {
+                event.preventDefault();
+            }
+        });
+
+        lines[i].addEventListener('touchend', function(e){
+            if (lastLeftObj && pressedObj != lastLeftObj) { // 点击除当前左滑对象之外的任意其他位置
+                $(lastLeftObj).animate({marginLeft:"0"}, 500); // 右滑
+                lastLeftObj = null; // 清空上一个左滑的对象
+            }
+            var diffX = e.changedTouches[0].pageX - lastXForMobile;
+            if (diffX < -50) {
+                $(pressedObj).animate({marginLeft:"-1.2rem"}, 500); // 左滑
+                lastLeftObj && lastLeftObj != pressedObj && 
+                    $(lastLeftObj).animate({marginLeft:"0"}, 500); // 已经左滑状态的按钮右滑
+                lastLeftObj = pressedObj; // 记录上一个左滑的对象
+            } else if (diffX > 50) {
+              if (pressedObj == lastLeftObj) {
+                $(pressedObj).animate({marginLeft:"0"}, 500); // 右滑
+                lastLeftObj = null; // 清空上一个左滑的对象
+              }
+            }
+        });
+    }
+
+    // 网页在PC浏览器中运行时的监听
+    for (var i = 0; i < len; ++i) {
+        $(lines[i]).bind('mousedown', function(e){
+            lastX = e.clientX;
+            pressedObj = this; // 记录被按下的对象
+        });
+
+        $(lines[i]).bind('mouseup', function(e){
+            if (lastLeftObj && pressedObj != lastLeftObj) { // 点击除当前左滑对象之外的任意其他位置
+                $(lastLeftObj).animate({marginLeft:"0"}, 500); // 右滑
+                lastLeftObj = null; // 清空上一个左滑的对象
+            }
+            var diffX = e.clientX - lastX;
+            if (diffX < -50) {
+                $(pressedObj).animate({marginLeft:"-1.2rem"}, 500); // 左滑
+                lastLeftObj && lastLeftObj != pressedObj && 
+                    $(lastLeftObj).animate({marginLeft:"0"}, 500); // 已经左滑状态的按钮右滑
+                lastLeftObj = pressedObj; // 记录上一个左滑的对象
+            } else if (diffX > 50) {
+              if (pressedObj == lastLeftObj) {
+                $(pressedObj).animate({marginLeft:"0"}, 500); // 右滑
+                lastLeftObj = null; // 清空上一个左滑的对象
+              }
+            }
+        });
+    }
+
+    //
+    //
+    $(".delete-button button").click(function(event) {
+    	var num = 1;
+        $(this).parents('li').hide();
+    	// console.log(num);
+    });
+    $(".shop-cart-edit a").click(function(event) {
+    	var thisText = $(this).text();
+    	var editan = $(this).parent().siblings('.shop-cart-li');
+    	if (thisText == '编辑') {
+    		$(this).text("取消");
+    		editan.animate({marginLeft:"-1.2rem"}, 500);
+    	}else{
+    		$(this).text("编辑");
+    		editan.animate({marginLeft:"0"}, 500);
+    	}
+    	
+    });
+    //选中订单
+    $(".shop-cart-li").click(function(event) {
+        if($(this).hasClass('shop-cart-check')){
+            $(this).removeClass('shop-cart-check').addClass('shop-cart-checked');
+        }else{
+            $(this).removeClass('shop-cart-checked').addClass('shop-cart-check');
+        }
+        shopCartTotal();
+    });
+    //结算总额
+    function shopCartTotal(){
+        // var total = $('#total').html();
+        var checkedNum = $(".shop-cart-checked").siblings('.order-ment-mess').find('.fontWeight');
+        var checkedNumLength = checkedNum.length;
+        var total = 0;
+        checkedNum.each(function(index, el) {
+            var num = parseInt($(this).html());
+            total += num;
+            $('#total').html(total);
+
+        });
+        if(checkedNumLength == 0){
+            $('#total').html(0);
+        }
+    }
+    shopCartTotal();
+})
+</script>
+</body>
+</html>

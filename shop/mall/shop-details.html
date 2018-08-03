@@ -1,0 +1,93 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" id="viewport" name="viewport">
+	<title>商品详情</title>
+	<script src="../js/flexible.debug.js"></script>
+	<link rel="stylesheet" href="../css/swiper.min.css">
+	<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+	<header>
+		<a class="act-style" href="javascript:history.go(-1)"><i class="back layui-icon">&#xe603;</i></a>
+        <span class="titletip">商品详情</span>
+	</header>
+	<div class="pageContent">
+		<div class="jf-banner">
+			<div class="swiper-container">
+			    <div class="swiper-wrapper">
+			      	<div class="swiper-slide">
+						<img src="../images/bannerbg.png" alt="">
+			      	</div>
+			      	<div class="swiper-slide">
+						<img src="../images/shangpic.png" alt="">
+			      	</div>
+			      	<div class="swiper-slide">
+						<img src="../images/bannerbg.png" alt="">
+			      	</div>
+			    </div>
+			    <div class="swiper-pagination"></div>
+			</div>
+		</div>
+		<div class="com-message">
+			<dl>
+				<dt>产品信息</dt>
+				<dd class="textindent">这是产品信息，购买这个商品需要1000积分，同时购买商品后会得到相应的金蛋金额。金蛋可用于交易，在线转账，及提现。您可以让你的商品升值</dd>
+				<dd>售价：1000积分</dd>
+				<dd>门市价：1000金蛋</dd>
+			</dl>
+			<dl>
+				<dt>商家信息</dt>
+				<dd>杂货铺商家名字</dd>
+				<dd>电话：0769-18888888</dd>
+				<dd>地址：广东省深圳市宝安区前海特区兴业路2005号互联网创意园A栋6楼</dd>
+			</dl>
+			<dl>
+				<dt>营业信息</dt>
+				<dd>人均消费参考价：6元</dd>
+				<dd>营业时间：8:00-18:00</dd>
+				<dd>官方推荐：买买买</dd>
+				<dd>扫描二维码购买：<img src="../images/QRcode.png" alt=""></dd>
+			</dl>
+			<dl>
+				<dt>使用规则</dt>
+				<dd>
+					<p class="textindent">歌德说过：“读一本好书，就是在和高尚的人谈话。”在公司开展的“担当•奋斗”文化建设系列活动中，我阅读了俞敏洪老师的《愿你的青春不负梦想》这本书，我也仿佛和这位令人尊敬的长者进行了一次谈话。同样是农村长大的我，和俞老师有许多共鸣。读这本书，不仅让我获得了启发，增长了智慧，而且让我忆起了自己曾经奋斗的青春，不禁感慨万分。</p><br />
+					<p>在书中，俞老师说到，有两件事情带着他走到了今天。一件事情是他始终为了进步而努力，另一件事情就是他始终有阶段性目标。掩卷回忆我的成长经历，似乎也是如此。</p><br />
+					<p>在努力工作的同时，为提高履职能力，我也一直不断学习，努力提高自己，获得了吉林大学工程硕士学位，通过国家一级建造师考试，具有一级建造师执业资格。</p><br />
+					<p>回首四十几年的漫漫人生路，虽然自己并没有多么宏大的目标。但是，我可以自豪地说：我时刻没有放松自己，始终在奋斗并为成为更好的自己而努力。</p><br />
+				</dd>
+			</dl>
+		</div>
+	</div>
+	<div class="shop-bar">
+		<ul>
+			<li class="bar-add">
+				<a href="javascript:;">加入购物车</a>
+			</li>
+			<li class="bar-buy">
+				<a href="order.html">立即购买</a>
+			</li>
+		</ul>
+	</div>
+<script src="../js/jquery-1.7.2.min.js"></script>
+<script src="../js/swiper.min.js"></script>
+<script src="../js/layer.js"></script>
+<script src="../js/index.js"></script>
+<script>
+$(function(){
+	$(".bar-add a").click(function(event) {
+		layer.open({
+		    content: '已加入购物车',
+		    skin: 'msg',
+		    time: 2,
+		    end: function(){
+		    	window.location.href = "order.html";
+		    }
+		});
+	});
+})
+</script>
+</body>
+</html>

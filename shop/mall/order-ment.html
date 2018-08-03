@@ -1,0 +1,122 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" id="viewport" name="viewport">
+    <title>订单管理</title>
+	<script src="../js/flexible.debug.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <a class="act-style" href="javascript:history.go(-1)"><i class="back layui-icon">&#xe603;</i></a>
+        <span class="titletip">订单管理</span>
+    </header>
+    <div class="pageContent order-ment-content">
+    	<div class="order-ment-list">
+    		<ul>
+    			<li>
+					<div class="title-name"><h3>众联商店11</h3></div>
+					<div class="order-li">
+		                <a class="active" href="order-details.html">
+		                    <img src="../images/Frame_mht.png" alt="">
+		                    <div class="detail-cont">
+		                        <h3>标题积分兑换</h3>
+		                        <p class="detail">这是详情，购买这个商品需要1000积分，同时购买商品后会得到相应的金蛋金额。金蛋可用于交易，在线转账，及提现。您可以让你的商品升值</p>
+		                    </div>
+		                </a>
+		            </div>
+		            <div class="order-ment-mess">
+	                    <span>共<i class="p1">1</i>件</span>
+	                    <span>合计：<i class="p1 red fontWeight">2000</i>金蛋</span>
+	                    <div class="mess-oper">
+							<button class="oper-del">删除订单</button>
+							<button class="oper-pay">再次购买</button>
+	                    </div>
+	                </div>
+    			</li>
+    			<li>
+					<div class="title-name"><h3>众联商店22</h3></div>
+					<div class="order-li">
+		                <a class="active" href="order-details.html">
+		                    <img src="../images/Frame_mht.png" alt="">
+		                    <div class="detail-cont">
+		                        <h3>标题积分兑换</h3>
+		                        <p class="detail">这是详情，购买这个商品需要1000积分，同时购买商品后会得到相应的金蛋金额。金蛋可用于交易，在线转账，及提现。您可以让你的商品升值</p>
+		                    </div>
+		                </a>
+		            </div>
+		            <div class="order-ment-mess">
+	                    <span>共<i class="p1">1</i>件</span>
+	                    <span>合计：<i class="p1 red fontWeight">2000</i>金蛋</span>
+	                    <div class="mess-oper">
+							<button class="oper-del">删除订单</button>
+							<button class="oper-pay">再次购买</button>
+	                    </div>
+	                </div>
+    			</li>
+    			<li>
+					<div class="title-name"><h3>众联商店33</h3></div>
+					<div class="order-li">
+		                <a class="active" href="order-details.html">
+		                    <img src="../images/Frame_mht.png" alt="">
+		                    <div class="detail-cont">
+		                        <h3>标题积分兑换</h3>
+		                        <p class="detail">这是详情，购买这个商品需要1000积分，同时购买商品后会得到相应的金蛋金额。金蛋可用于交易，在线转账，及提现。您可以让你的商品升值</p>
+		                    </div>
+		                </a>
+		            </div>
+		            <div class="order-ment-mess">
+	                    <span>共<i class="p1">1</i>件</span>
+	                    <span>合计：<i class="p1 red fontWeight">2000</i>金蛋</span>
+	                    <div class="mess-oper">
+							<button class="oper-del">删除订单</button>
+							<button class="oper-pay">再次购买</button>
+	                    </div>
+	                </div>
+    			</li>
+    			<li>
+					<div class="title-name"><h3>众联商店44</h3></div>
+					<div class="order-li">
+		                <a class="active" href="order-details.html">
+		                    <img src="../images/Frame_mht.png" alt="">
+		                    <div class="detail-cont">
+		                        <h3>标题积分兑换</h3>
+		                        <p class="detail">这是详情，购买这个商品需要1000积分，同时购买商品后会得到相应的金蛋金额。金蛋可用于交易，在线转账，及提现。您可以让你的商品升值</p>
+		                    </div>
+		                </a>
+		            </div>
+		            <div class="order-ment-mess">
+	                    <span>共<i class="p1">1</i>件</span>
+	                    <span>合计：<i class="p1 red fontWeight">2000</i>金蛋</span>
+	                    <div class="mess-oper">
+							<button class="oper-del">删除订单</button>
+							<button class="oper-pay">再次购买</button>
+	                    </div>
+	                </div>
+    			</li>
+    		</ul>
+    	</div>
+    </div>
+<script src="../js/jquery-1.7.2.min.js"></script>
+<script src="../js/layer.js"></script>
+<script>
+$(function(){
+	//删除订单
+	$('.oper-del').click(function(event) {
+		$(this).parents('li').attr('class','order_ment_li');
+		layer.open({
+            content: '确定删除订单吗？删除后不可恢复',
+            btn: ['确认', '取消'],
+            shadeClose: false,
+            yes: function(index){
+                $(".order_ment_li").hide();
+                layer.close(index);
+            }
+        });
+		
+	});
+})
+</script>
+</body>
+</html>

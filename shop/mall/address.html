@@ -1,0 +1,105 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" id="viewport" name="viewport">
+	<title>地址管理</title>
+    <script src="../js/flexible.debug.js"></script>
+	<link rel="stylesheet" href="../css/swiper.min.css">
+	<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+	<header>
+		<a class="act-style" href="javascript:history.go(-1)"><i class="back layui-icon">&#xe603;</i></a>
+        <span class="titletip">地址管理</span>
+        <a class="address-made-link" href="address-made.html">新增地址</a>
+	</header>
+	<div class="pageContent address-change">
+		<div class="rece-address" id="change_address">
+            <i class="layui-icon adress-icon-pic">&#xe715;</i>
+            <a href="javascript:;" class="rece-address-mesg">
+                <p class="_handle_sh_name">收货人：王五</p>
+                <p class="_handle_sh_number">电话：13888888888</p>
+                <p class="pflex">
+                    <span class="_handle_sh_addressTitle">收货地址：</span>
+                    <span class="address-span _handle_sh_address">广东省深圳市宝安区前海特区兴业路2005号互联网创意园A栋6楼</span>
+                </p>
+            </a>
+            <i class="layui-icon layui-change">&#xe618;</i>
+        </div>
+        <div class="rece-address">
+            <i class="layui-icon adress-icon-pic">&#xe715;</i>
+            <a href="javascript:;" class="rece-address-mesg">
+                <p class="_handle_sh_name">收货人：李四</p>
+                <p class="_handle_sh_number">电话：13777777777</p>
+                <p class="pflex">
+                    <span class="_handle_sh_addressTitle">收货地址：</span>
+                    <span class="address-span _handle_sh_address">广东省深圳市宝安区前海特区兴业路2005号互联网创意园A栋7楼</span>
+                </p>
+            </a>
+            <i class="layui-icon layui-change">&#xe618;</i>
+        </div>
+        <div class="rece-address">
+            <i class="layui-icon adress-icon-pic">&#xe715;</i>
+            <a href="javascript:;" class="rece-address-mesg">
+                <p class="_handle_sh_name">收货人：张三</p>
+                <p class="_handle_sh_number">电话：13999999999</p>
+                <p class="pflex">
+                    <span class="_handle_sh_addressTitle">收货地址：</span>
+                    <span class="address-span _handle_sh_address">广东省深圳市宝安区前海特区兴业路2005号互联网创意园A栋8楼</span>
+                </p>
+            </a>
+            <i class="layui-icon layui-change">&#xe618;</i>
+        </div>
+	</div>
+	<div class="shop-bar" style="display:none;">
+		<ul>
+			<li class="bar-buy">
+				<a href="javascript:;">删除该地址</a>
+			</li>
+		</ul>
+	</div>
+<script src="../js/jquery-1.7.2.min.js"></script>
+<script src="../js/layer.js"></script>
+<script>
+$(function(){
+    $(".rece-address").click(function(event) {
+        $(this).attr('id','change_address');
+        $(this).children('.layui-change').addClass('red');
+        $(this).siblings().children('.layui-change').removeClass('red');
+        $(this).siblings().removeAttr('id','change_address');
+        del_address();
+        $(".shop-bar").show();
+    });
+    //选中地址操作
+    function del_address(){
+        $(".bar-buy").click(function(event) {
+            layer.open({
+                content: '是否删除该地址',
+                btn: ['确认', '取消'],
+                shadeClose: false,
+                yes: function(){
+                    layer.open({
+                      content: '已删除',
+                      time: 2,
+                      skin: 'msg'
+                    });
+                    $("#change_address").css('display','none');
+                    $(".shop-bar").hide();
+                },
+                no:function(){
+                    layer.open({
+                      content: '选择了不删除',
+                      time: 2,
+                      skin: 'msg'
+                    });
+                    $(".shop-bar").hide();
+                }
+            });
+        });
+    }
+    
+})
+</script>
+</body>
+</html>

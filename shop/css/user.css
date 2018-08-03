@@ -1,0 +1,56 @@
+header a.top-user-sub{position: absolute;top: 0;right:0;font-size: 14px;color:#1caceb;font-weight: 400;padding: 0 0.2rem;}
+header a.top-user-sub:active{background-color: #f6f6f6;}
+.session{padding-bottom: 1.4rem;}
+.user{position: relative;text-align: center;padding: 0.5rem;width: 100%;height: 4rem; background:url(../images/myper_bg.png) no-repeat;
+background-size: cover;color:#fff;}
+.user img{width: 1.5rem;height: 1.5rem;margin:0.4rem auto 0;}
+.user span{line-height:1rem;font-size: 16px;}
+.user a{position: absolute;right: 0.3rem;top: 0.3rem;padding: 0.15rem 0.25rem;border: 1px solid #fff;border-radius: 0.06rem;color:#fff;}
+.user a:active{background-color: #1caceb;}
+.user-integral{padding: 0.2rem;background-color: #fff;font-size: 16px;line-height: 1rem;}
+.user-integral span{padding-left: 0.2rem;}
+.user-integral span i{color:#f40;padding-right: 0.1rem;}
+.user-bar{margin-top: 0.2rem;}
+.user-bar ul li{background-color: #fff;line-height: 1.2rem;position: relative;font-size: 14px;border-bottom: 1px solid #dedede;}
+.user-bar ul li:last-of-type{border-bottom: none;}
+.user-bar ul li a{display: block;width: 100%;height: 100%;padding:0 0.2rem;}
+.user-bar ul li a:active{background-color: #f6f6f6;color:#1caceb;}
+.user-bar ul li a:active +i{color:#1caceb;}
+.user-bar ul li i{position: absolute;top:0;right: 0.2rem;font-size: 18px;}
+/* about */
+.user-about{background-color: #fff;padding: 0.2rem;}
+.user-about p{line-height: 1.8;font-size: 14px;margin-bottom: 0.2rem;}
+.user-about h3{line-height: 2;font-size: 16px;font-weight: 600;}
+.user-about .text-indent{text-indent: 2em;}
+/* informs */
+.informs{display: flex;padding: 0.2rem;flex-wrap: nowrap;justify-content: center;/* align-items: center; */}
+.informs-img{flex: 1;}
+.informs-img img{width: 1rem;height: 1rem;}
+.informs-cont{flex: 6;background-color: #fff;border-radius: 0.2rem;padding: 0.2rem}
+.informs-cont .informsTimes{padding-top:0.2rem;}
+/* set */
+.user-set{line-height: 1.2rem;height:1.2rem;position: relative;padding: 0 0.2rem;background-color: #fff;border-bottom: 1px solid #dedede;}
+.user-set-border-none{border-bottom: none;}
+.user-set label{position: absolute;left: 0.2rem;}
+.user-set input{width: 100%;height: 100%;position: absolute;left: 0;top: 0;color:#666;padding: 0 1rem 0 0.2rem;}
+.user-set i{width: 0.8rem;height: 1.2rem; position: absolute;right: 0;top: 0;text-align: center;font-size: 18px;}
+.user-set-picture{height: 1.8rem;}
+.user-set-picture img{width: 1.2rem;height: 1.2rem;position: absolute;right: 1.2rem;top: 0.3rem;border-radius: 50%;}
+.user-set-picture label{position: absolute;left: 0.2rem;line-height: 1.8rem;}
+.user-set-picture i{width: 0.8rem;line-height: 1.8rem; position: absolute;right: 0;top: 0;text-align: center;font-size: 18px;}
+.user-set-picture input{width: 100%;height: 100%;position: absolute;left: 0;top: 0;opacity: 0;z-index: 9;}
+.loginOut{text-align: center;}
+.loginOut input{background-color: #1caceb;width: 80%; color:#fff;font-size: 18px;line-height: 1.2rem;margin:1.2rem auto 2rem;
+	border-radius: 0.1rem;}
+.loginOut input:active{background-color: #0e8cc3;}
+
+
+
+
+
+
+
+
+
+
+

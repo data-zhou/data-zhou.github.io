@@ -1,0 +1,99 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" id="viewport" name="viewport">
+	<title>选择地址</title>
+    <script src="../js/flexible.debug.js"></script>
+	<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+	<header>
+		<a class="act-style" href="javascript:history.go(-1)"><i class="back layui-icon">&#xe603;</i></a>
+        <span class="titletip">选择地址</span>
+        <a class="address-made-link" href="address-made.html">新增地址</a>
+	</header>
+	<div class="pageContent address-change">
+		<div class="rece-address" id="change_address">
+            <i class="layui-icon adress-icon-pic">&#xe715;</i>
+            <a href="javascript:;" class="rece-address-mesg">
+                <p class="_handle_sh_name">收货人：王五</p>
+                <p class="_handle_sh_number">电话：13888888888</p>
+                <p class="pflex">
+                    <span class="_handle_sh_addressTitle">收货地址：</span>
+                    <span class="address-span _handle_sh_address">广东省深圳市宝安区前海特区兴业路2005号互联网创意园A栋6楼</span>
+                </p>
+            </a>
+            <i class="layui-icon layui-change">&#xe618;</i>
+        </div>
+        <div class="rece-address">
+            <i class="layui-icon adress-icon-pic">&#xe715;</i>
+            <a href="javascript:;" class="rece-address-mesg">
+                <p class="_handle_sh_name">收货人：李四</p>
+                <p class="_handle_sh_number">电话：13777777777</p>
+                <p class="pflex">
+                    <span class="_handle_sh_addressTitle">收货地址：</span>
+                    <span class="address-span _handle_sh_address">广东省深圳市宝安区前海特区兴业路2005号互联网创意园A栋7楼</span>
+                </p>
+            </a>
+            <i class="layui-icon layui-change"></i>
+        </div>
+        <div class="rece-address">
+            <i class="layui-icon adress-icon-pic">&#xe715;</i>
+            <a href="javascript:;" class="rece-address-mesg">
+                <p class="_handle_sh_name">收货人：张三</p>
+                <p class="_handle_sh_number">电话：13999999999</p>
+                <p class="pflex">
+                    <span class="_handle_sh_addressTitle">收货地址：</span>
+                    <span class="address-span _handle_sh_address">广东省深圳市宝安区前海特区兴业路2005号互联网创意园A栋8楼</span>
+                </p>
+            </a>
+            <i class="layui-icon layui-change"></i>
+        </div>
+	</div>
+	<div class="shop-bar">
+		<ul>
+			<li class="bar-buy">
+				<a href="javascript:;">确认</a>
+			</li>
+		</ul>
+	</div>
+<script src="../js/jquery-1.7.2.min.js"></script>
+<script src="../js/layer.js"></script>
+<script>
+$(function(){
+    //地址选择的时候
+    $(".rece-address").click(function(event) {
+        $(this).attr('id','change_address');
+        $(this).children('.layui-change').html("&#xe618;");
+        $(this).siblings().children('.layui-change').empty();
+        $(this).siblings().removeAttr('id','change_address');
+        bar_buy();
+    });
+    //选中地址详情
+    function bar_buy(){
+        $(".bar-buy").click(function(event) {
+            var _handle_sh_name = $("#change_address ._handle_sh_name").html();
+            var _handle_sh_number = $("#change_address ._handle_sh_number").html();
+            var _handle_sh_addressTitle = $("#change_address ._handle_sh_addressTitle").html();
+            var _handle_sh_address = $("#change_address ._handle_sh_address").html();
+            layer.open({
+                content: '是否选择收货信息',
+                btn: ['确定','取消'],
+                yes: function(index){
+                    layer.open({
+                        content:_handle_sh_name+'</br>'+_handle_sh_number+'</br>'+_handle_sh_addressTitle+_handle_sh_address,
+                        // style:'text-align:left;color:#f40;',
+                        skin:'msg',
+                        time:3
+                    });
+                    // window.location.href = "order.html";
+                }
+            });
+        });
+    }
+    bar_buy();
+})
+</script>
+</body>
+</html>

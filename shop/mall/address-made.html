@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" id="viewport" name="viewport">
+	<title>新增地址</title>
+	<script src="../js/flexible.debug.js"></script>
+	<link rel="stylesheet" href="../css/LArea.min.css">
+	<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+	<header>
+		<a class="act-style" href="javascript:history.go(-1)"><i class="back layui-icon">&#xe603;</i></a>
+        <span class="titletip">新增地址</span>
+	</header>
+	<div class="pageContent">
+		<div class="address-made">
+			<ul>
+				<li>
+					<label for="">姓名：</label>
+					<input name="made_name" type="text" placeholder="请填写姓名">
+				</li>
+				<li>
+					<label for="">手机号码：</label>
+					<input name="made_phone" type="text"  placeholder="请填写手机号码">
+				</li>
+				<li>
+					<label for="">省市区：</label>
+					<input name="made_province" id="ssq" type="text"  placeholder="请选择省市区" readonly="readonly" >
+				</li>
+				<li class="li-area">
+					<label for="">详细地址：</label>
+					<textarea name="made_detail" id="" placeholder="请填写详细地址"></textarea>
+				</li>
+			</ul>
+			<div class="made-button">
+				<button>确认添加地址</button>
+			</div>
+		</div>
+	</div>
+<script src="../js/jquery-1.7.2.min.js"></script>
+<script src="../js/layer.js"></script>
+<script src="../js/LAreaData1.js"></script>
+<script src="../js/LAreaData2.js"></script>
+<script src="../js/LArea.min.js"></script>
+<script>
+var area1 = new LArea();
+area1.init({
+    'trigger': '#ssq', //触发选择控件的文本框，同时选择完毕后name属性输出到该位置
+    // 'valueTo': '#ssq', //选择完毕后id属性输出到该位置
+    'keys': {
+        id: 'id',
+        name: 'name'
+    }, //绑定数据源相关字段 id对应valueTo的value属性输出 name对应trigger的value属性输出
+    'type': 1, //数据源类型
+    'data': LAreaData //数据源
+});
+$(function(){
+	var made_name,made_phone,made_province,made_detail;
+	//判断格式
+	function validate_made(){
+		made_name = document.getElementsByName('made_name')[0].value;
+		made_phone = document.getElementsByName('made_phone')[0].value;
+		made_province = document.getElementsByName('made_province')[0].value;
+		made_detail = document.getElementsByName('made_detail')[0].value;
+		var phone_val = /^(([0\+]\d{2,3}-)?(0\d{2,3})-)(\d{7,8})(-(\d{3,}))?$/;
+		if(made_name == '' || made_name.length < 2 || made_name.length > 6){
+			layer.open({content:'名字长度应为2-6之间',skin:'msg',time:2});
+		}else
+		if(!/^1(3|4|5|7|8)\d{9}$/.test(made_phone)){
+			layer.open({content:'手机号码格式错误',skin:'msg',time:2});
+		}else
+		if(made_province == ''){
+			layer.open({content:'请选择省市区',skin:'msg',time:2});
+		}else
+		if(made_detail == ''){
+			layer.open({content:'请填写详细地址',skin:'msg',time:2});
+		}else{
+			layer.open({
+				content:'提交信息：'+'</br>名字：'+made_name+'</br>手机：'+made_phone+'</br>省市区：'+made_province+'</br>详细地址：'+made_detail,
+				skin:'msg',
+				time:3
+			});
+			window.history.go(-1);
+		}
+	}
+	//提交信息
+	$(".made-button button").click(function(event) {
+		validate_made();
+		// layer.open({
+		// 	content:'提交信息：'+'</br>名字：'+made_name+'</br>手机：'+made_phone+'</br>省市区：'+made_province+'</br>详细地址：'+made_detail,
+		// 	skin:'msg',
+		// 	time:3
+		// })
+
+	});
+})
+</script>
+</body>
+</html>
