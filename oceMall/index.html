@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" id="viewport" name="viewport">
+    <!-- <meta http-equiv="refresh" content="3;URL=http://www.baidu.com"> -->
+    <title>OCE Mall</title>
+    <script src="js/flexible.debug.js"></script>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="indexBg">
+        <div class="indexContent">
+            <img src="images/logo.png" alt="">
+            <p class="indexLogoName">OCE Mall</p>
+            <p>万物智链·算力智美</p>
+        </div>
+        <div class="tomeOut"><i id="time"></i> 秒后跳转</div>
+    </div>
+<script>
+
+//设定倒数秒数  
+var t = 5;  
+//显示倒数秒数 
+var intervalid; 
+intervalid = setInterval("showTime()", 1000); 
+function showTime() { 
+if (t == 0) { 
+window.location.href = "page/stateLinkUp.html"; 
+clearInterval(intervalid); 
+} 
+document.getElementById("time").innerHTML = t; 
+t--; 
+}
+
+</script>
+</body>
+</html>

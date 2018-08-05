@@ -1,0 +1,117 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" id="viewport" name="viewport">
+    <title>OCE Mall</title>
+    <script src="../js/flexible.debug.js"></script>
+	<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <!-- <a class="act-style" href="javascript:history.go(-1)"><i class="back layui-icon">&#xe603;</i></a> -->
+        <span class="titletip">OCE数据产权交易商城</span>
+    </header>
+    <div class="pageContent">
+        <div class="mainListContent">
+            <h3><img src="../images/shopCar.png" class="zhou-icon">最新上架</h3>
+            <div class="mainList clearfix">
+                <div class="mainListBox">
+                    <div class="mainListDiv">
+                        <a href="stateLinkUp.html">
+                            <img src="../images/01.png" alt="">
+                            <div class="title">
+                                新疆巴音布鲁克蒙古包住宿电话大全
+                            </div>
+                        </a>
+                        <div class="buyButton">
+                            <input class="lookBtn" type="button" value="50 oce 购买">
+                        </div>
+                    </div>
+                </div>
+                <div class="mainListBox">
+                    <div class="mainListDiv">
+                        <a href="stateLinkUp.html">
+                            <img src="../images/02.png" alt="">
+                            <div class="title">
+                                新疆巴音布鲁克蒙古包住宿电话大全
+                            </div>
+                        </a>
+                        <div class="buyButton">
+                            <input class="lookBtn" type="button" value="50 oce 购买">
+                        </div>
+                    </div>
+                </div>
+                <div class="mainListBox">
+                    <div class="mainListDiv">
+                        <a href="stateLinkUp.html">
+                            <img src="../images/03.png" alt="">
+                            <div class="title">
+                                新疆巴音布鲁克蒙古包住宿电话大全
+                            </div>
+                        </a>
+                        <div class="buyButton">
+                            <input class="lookBtn" type="button" value="50 oce 购买">
+                        </div>
+                    </div>
+                </div>
+                <div class="mainListBox">
+                    <div class="mainListDiv">
+                        <a href="stateLinkUp.html">
+                            <img src="../images/04.png" alt="">
+                            <div class="title">
+                                新疆巴音布鲁克蒙古包住宿电话大全
+                            </div>
+                        </a>
+                        <div class="buyButton">
+                            <input class="lookBtn" type="button" value="50 oce 购买">
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>
+        <div class="mainListContent data-state">
+            <h3><img src="../images/classify.png" class="zhou-icon">oce 数据动态</h3>
+            <div class="dataStateCont">
+                <div class="dataStateList">
+                    <img src="../images/audio.png" alt="">
+                    <h4>音频</h4>
+                </div>
+                <div class="dataStateList">
+                    <img src="../images/video.png" alt="">
+                    <h4>视频</h4>
+                </div>
+                <div class="dataStateList">
+                    <img src="../images/doc.png" alt="">
+                    <h4>文档</h4>
+                </div>
+            </div> 
+        </div>
+        <!-- 购买成功 查看 -->
+        <div class="buyLook">
+            <div class="buyLookCont">
+                <img src="../images/buySuccess.png" alt="">
+                <h3>购买成功</h3>
+                <p>点击查看区块链记录</p>
+                <a class="lookBtn lookLink" href="javascript:;">查 看</a>
+                <div class="close"></div>
+            </div>
+        </div>
+    </div>
+<script src="../js/jquery-1.7.2.min.js"></script>
+<script>
+$(function(){
+    $(".mainListBox input").click(function(){
+        $('.buyLook').animate({top:'0'});
+    })
+    $(".close").click(function(){
+        $('.buyLook').animate({top:100+'%'});
+    })
+    $(".lookLink").click(function(){
+        $('.buyLook').animate({top:100+'%'});
+        window.location.href = "blockDetails.html"; 
+    })
+})
+</script>
+</body>
+</html>

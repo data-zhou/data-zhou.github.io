@@ -1,0 +1,113 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" id="viewport" name="viewport">
+    <title>OCE Mall</title>
+    <script src="../js/flexible.debug.js"></script>
+	<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <!-- <a class="act-style" href="javascript:history.go(-1)"><i class="back layui-icon">&#xe603;</i></a> -->
+        <span class="titletip">OCE数据产权交易商城</span>
+    </header>
+    <div class="pageContent">
+        <div id="mainListContent" class="mainListContent pb5rem">
+            <h3><img src="../images/data-move.png" class="zhou-icon">OCE 数据动态</h3>
+            <div id="setTop" class="setTop">
+                <div class="setTop-one">
+                    <span>11:23</span>
+                    <span class="blue">置顶</span>
+                    <span>C罗 JC首秀</span>
+                    <span class="green">from</span>
+                </div>
+                <div class="setTop-two">
+                    <span>Geniusldea Drone</span>
+                    <a style="color:#ff4400;padding-left:0.2rem;" href="javascript:;">可上链</a>
+                    <a style="float:right;text-decoration:underline;padding:0 0.3rem;color:#1caceb;" href="mainPage.html">上链</a>
+                </div>
+            </div>
+            <div class="stateLink-data">
+                <span>12:16</span>
+                <span>+0.06</span>
+                <span>oce</span>
+                <span class="green">from</span>
+                <span>JGW phone</span>
+            </div>
+        </div>
+        <div class="mainListContent data-state pb5rem">
+            <h3><img src="../images/trend.png" class="zhou-icon">挖矿收益&数据（产品）上链趋势图</h3>
+            <div class="data-line">
+                <div id="ataLineShow"></div>
+                <h3>自有*loT区块链设备列表运行一览</h3>
+            </div>
+            <div class="mining">
+                <ul>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+<script src="../js/jquery-1.7.2.min.js"></script>
+<script src="../js/page.js"></script>
+<script src="../js/echarts.min.js"></script>
+<script>
+
+//5秒后显示可上链
+//设定倒数秒数  
+var t = 3;  
+//显示倒数秒数 
+var intervalid; 
+intervalid = setInterval("showTime()", 1000); 
+function showTime() { 
+    if (t == 0) { 
+        document.getElementById("setTop").style.display = "block";
+        clearInterval(intervalid); 
+    } 
+    t--; 
+}
+option = {
+    tooltip: {
+        trigger: 'axis'
+    },
+    grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '3%',
+        containLabel: true
+    },
+    toolbox: {
+        feature: {
+            saveAsImage: {}
+        }
+    },
+    xAxis: {
+        type: 'category',
+        boundaryGap: false,
+        data: ['4时','8时','12时','16时','20时','24时']
+    },
+    yAxis: {
+        type: 'value'
+    },
+    series: [
+        {
+            name:'挖矿收益',
+            type:'line',
+            stack: '总量',
+            data:[1, 6, 15, 8, 12, 18]
+        },
+        {
+            name:'上链',
+            type:'line',
+            stack: '上升',
+            data:[2, 12, 16, 8, 12, 5]
+        }
+    ]
+};
+var ataLineShowChart = echarts.init(document.getElementById('ataLineShow'));
+ataLineShowChart.setOption(option);
+
+</script>
+</body>
+</html>

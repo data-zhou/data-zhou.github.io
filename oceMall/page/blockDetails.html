@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" id="viewport" name="viewport">
+    <title>OCE Mall</title>
+    <script src="../js/flexible.debug.js"></script>
+	<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <a class="act-style" href="javascript:history.go(-1)"><i class="back layui-icon">&#xe603;</i></a>
+        <span class="titletip">区块链记录</span>
+    </header>
+    <div class="pageContent">
+        <div class="search">
+            <div class="searchPut">
+                <input type="text" placeholder="请输入交易ID">
+                <i id="searchBtn" class="layui-icon">&#xe615;</i>
+            </div>
+        </div>
+        <div class="blockList">
+            
+        </div>
+    </div>
+    <script src="../js/jquery-1.7.2.min.js"></script>
+    <script src="../js/layer.js"></script>
+    <script src="../js/page.js"></script>
+<script>
+$(function(){
+    //搜索
+	$('#searchBtn').click(function(event) {
+		layer.open({
+            content: '请输入正确的交易ID',
+            btn: ['确认', '取消'],
+            shadeClose: false
+        });
+		
+	});
+})  
+</script>
+</body>
+</html>
