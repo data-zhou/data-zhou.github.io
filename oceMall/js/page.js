@@ -44,7 +44,7 @@ $(function(){
             dataType: 'json',
             success:function(data){
                 for(var i=0;i<data.length;i++){
-                    var describe = '<a href="mainDetails.html" class="blockListShow">'+
+                    var describe = '<a href="sonDetails.html" class="blockListShow">'+
                                    '<h3 class="blockListShow-time">'+data[i].date+'</h3>'+
                                         '<div class="blockListShow-cont">'+
                                         '<div class="type"><img src="../images/shou.png" alt=""></div>'+
@@ -69,7 +69,6 @@ $(function(){
             url:"http://121.201.80.40:8085/detail",
             dataType: 'json',
             success:function(data){
-                console.log(data);
                 var linkContent = '<ul><li><i>币种</i>'+
                                 '<span>'+data.Coin+'</span>'+'</li>'+
                                 '<li><i>类型</i>'+
@@ -77,7 +76,7 @@ $(function(){
                                 '<li><i>状态</i>'+
                                 '<span>'+data.status+'</span>'+'</li>'+
                                 '<li><i>金额</i>'+
-                                '<span>'+data.Money+'</span>'+'</li>'+
+                                '<span>'+0.06+'</span>'+'</li>'+
                                 '<li><i>时间</i>'+
                                 '<span>'+data.Date+'</span>'+'</li>'+
                                 '<li><i>交易ID</i>'+
